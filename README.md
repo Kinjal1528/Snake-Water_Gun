@@ -39,11 +39,11 @@ Challenge the computer, enjoy the styling, and see who wins!
 ## 📝 How to Run Locally
 
 ```bash
-# 1. Clone the repo
+1. Clone the repo
 git clone https://github.com/Kinjal1528/Snake-Water_Gun.git
 
-# 2. Install dependencies
+2. Install dependencies
 pip install streamlit
 
-# 3. Run the app
+3. Run the app
 streamlit run App.py
