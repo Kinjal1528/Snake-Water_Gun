@@ -1,6 +1,7 @@
 [theme]
-primaryColor="#F39C12"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#000000"
+base="light"
+primaryColor="#FFFFFF"  # Button and highlight color - white
+backgroundColor="#000000"  # Makes it dark like your background image
+secondaryBackgroundColor="#1E1E1E"  # Card/input background
+textColor="#FFFFFF"  # All text in white
 font="sans serif"
