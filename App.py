@@ -58,7 +58,6 @@ else:
              (user_choice == 'Gun' and computer_choice == 'Snake'):
             result = "🎉 You Win!"
             st.success(result)
-            st.balloons()
         else:
             result = "😢 You Lost! Try again!"
             st.error(result)
