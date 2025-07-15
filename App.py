@@ -1,9 +1,28 @@
 import streamlit as st
 import random
+import base64
 
+# Add background function
+def set_bg_from_local(image_file):
+    with open(image_file, "rb") as image:
+        encoded = base64.b64encode(image.read()).decode()
+    bg_img = f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/png;base64,{encoded}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }}
+    [data-testid="stHeader"], [data-testid="stToolbar"] {{
+        background-color: rgba(0,0,0,0);
+    }}
+    </style>
+    """
+    st.markdown(bg_img, unsafe_allow_html=True)
 # 1. PAGE SETUP
 st.set_page_config(page_title="Snake Water Gun Game", page_icon="🐍", layout="centered")
-
+set_bg_from_local("background.jpeg")
 # 2. HEADER
 st.title("🐍 Snake - Water - Gun Game")
 
@@ -45,4 +64,4 @@ else:
 
 # 5. FOOTER
 st.markdown("---")
-st.markdown("<center>💖 Created with love by Kinjal 💖</center>", unsafe_allow_html=True)
+st.markdown("<center> Created by Kinjal✨</center>", unsafe_allow_html=True)
